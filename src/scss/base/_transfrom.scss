@@ -1,0 +1,40 @@
+@mixin transform-R($visibility) {
+  transform: $visibility;
+  -webkit-transform: $visibility;
+  -moz-transform: $visibility;
+  -ms-transform: $visibility;
+  -o-transform: $visibility;
+}
+
+@mixin transform-og-R($visibility) {
+  transform-origin: $visibility;
+  -webkit-transform-origin: $visibility;
+  -moz-transform-origin: $visibility;
+  -ms-transform-origin: $visibility;
+  -o-transform-origin: $visibility;
+}
+
+@mixin transform-R($visibility) {
+  transform: $visibility;
+  -webkit-transform: $visibility;
+  -moz-transform: $visibility;
+  -ms-transform: $visibility;
+  -o-transform: $visibility;
+}
+
+@mixin transition-R($visibility) {
+  transition: $visibility;
+  -webkit-transition: $visibility;
+  -moz-transition: $visibility;
+  -ms-transition: $visibility;
+  -o-transition: $visibility;
+}
+
+
+@mixin animation-R($visibility) {
+  animation: $visibility;
+  -webkit-animation: $visibility;
+  -moz-animation: $visibility;
+  -ms-animation: $visibility;
+  -o-animation: $visibility;
+}

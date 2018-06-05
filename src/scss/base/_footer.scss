@@ -1,0 +1,63 @@
+/* Footer ----------------------- */
+footer {
+	.shareLink {
+		width: 100%;
+		text-align: center;
+		padding: 3em 0;
+		ul > li {
+			display: inline-block;
+			padding: 0 15px;
+			img {
+				width: 50px;
+				opacity: 1;
+				@include transition-R(opacity .3s);
+			}
+			a:hover {
+				img {
+					opacity: .7;
+				}
+			}
+		}
+		
+	}
+	.footerBar {
+		background-color: #b5b5b5;
+		padding: 10px 0;
+		font-size: 0;
+		a.foxconnEduFounLogo {
+			width: 45%;
+			display: inline-block;
+			vertical-align: middle;
+			@media (min-width: 576px) {
+				width: 20%;
+			}
+			img {
+				max-width: 244px;
+				width: 100%;
+				display: inline-block;
+			}
+		}
+		ul {
+			display: inline-block;
+			width: 80%;
+			text-align: right;
+			vertical-align: middle;
+			display: none;
+			@media (min-width: 576px) {
+				display: inline-block;
+			}
+			li {
+				font-size: 1rem;
+				display: inline-block;
+				color: #ffffff;
+				padding: 0 20px;
+				border-right: 1px solid #ffffff;
+				a {
+					color: #ffffff;
+				}
+				&:last-of-type { border-right: none; padding-right: 20px; }
+			}
+		}
+
+	}
+}

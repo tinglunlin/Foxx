@@ -1,0 +1,295 @@
+/* Header ----------------------- */
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	// background: rgba(255,255,255,.8);
+	img.white { display: block;}
+	img.base {display: none;}
+	@media (min-width: 768px) {
+		img.white { display: none;}
+		img.base {display: block;}
+	}
+	&.sm {
+		background-color: #051468;
+		height: 75px;
+		.nav-right { background-color: #051468; }
+		@media (min-width: 768px) {
+			height: auto;
+			background-color: transparent;
+			img.white { display: block;}
+			img.base {display: none;}
+		}
+	}
+	nav {
+		padding: 40px 0;
+		font-size: 0;
+		@media (min-width: 992px) {
+			padding: 50px 0;
+		}
+	}
+	#logo {
+		width: $kvlogoWidth768;
+		padding: 25px 10px;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		img {
+			width: 100px;
+		}
+		
+		@media (min-width: 1200px) {
+			width: $kvlogoWidth1200;
+			padding: 30px 40px;
+			img {
+				width: 197px;
+				height: 63px;
+			}
+		}
+	}
+	.nav-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 98;
+		@include transition-R(all .5s);
+	}
+	ul {
+		width: 100%;
+		display: inline-block;
+		font-size: 14px;
+		text-align: right;
+		li {
+			font-size: 1.2em;
+			padding: 0 15px;
+			text-align: center;
+			letter-spacing: 1.4px;
+			font-weight: 400;
+			
+			&:last-of-type {
+				border-right: none;
+			}
+			a {
+				color: #ffffff;
+				text-decoration: none;
+				&:hover {
+					color: #ffffff;
+					opacity: .8;
+					text-decoration: none;
+				}
+			}
+			@media (min-width: 992px) {
+				font-size: 1.5em;
+				padding: 0 25px;
+				// display: inline-block;
+				// border-right: 2px solid #ffffff;
+			}
+			@media (min-width: 768px) {
+				font-size: 1.2em;
+				padding: 0 10px;
+				display: inline-block;
+				border-right: 2px solid #ffffff;
+			}
+		}
+	}
+
+	// MENU
+	.button_container {
+	    position: fixed;
+	    // margin: 10px 0;
+	    top: 30px;
+	    right: 30px;
+	    height: 18px;
+	    width: 30px;
+	    cursor: pointer;
+	    z-index: 1001;
+	    @include transition-R(opacity .25s ease);
+	}
+
+	.button_container span {
+	    background: #FFF;
+	    border: none;
+	    height: 2px;
+	    width: 100%;
+	    position: absolute;
+	    top: 0%;
+	    left: 50%;
+	    @include transform-R(translateX(-50%));
+	    @include transition-R(all .35s ease);
+	    cursor: pointer;
+	}
+	.button_container span:nth-child(1) {
+		width: 80%;
+	}
+	.button_container span:nth-child(2) {
+	    width: 100%;
+	    top: 50%;
+	}
+	.button_container span:nth-child(3) {
+	    width: 80%;
+	    top: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.button_container {
+			display: none;
+		}
+	}
+
+	.button_container:hover {
+		// opacity: 0.7;
+	}
+
+	.button_container.active .top {
+		@include transform-R(translateY(8px) translateX(-50%) rotate(45deg));
+	    background: #fff;
+	}
+
+	.button_container.active .middle {
+	    opacity: 0;
+	    background: #fff;
+	}
+
+	.button_container.active .bottom {
+	    @include transform-R(translateY(-10px) translateX(-50%) rotate(-45deg));
+	    background: #fff;
+	}
+	@media (max-width: 767px) {
+		.container-fluid.nav-right {
+			padding: 0;
+		}
+		.overlay {
+		    position: fixed;
+		    background: #000000;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    height: 0%;
+		    opacity: 0;
+		    opacity: 1\9\0;
+		    visibility: hidden;
+		    -webkit-transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+		    -o-transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+		    transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+		    overflow: hidden;
+		    z-index: 1000;
+		}
+		.overlay .overlay-nav {
+		    position: relative;
+		    /*height: 70%;*/
+		    top: 50%;
+		    -webkit-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		    transform: translateY(-50%);
+		    font-size: 30px;
+		    font-weight: 300;
+		    letter-spacing: .1em;
+		    text-align: center;
+		}
+		.overlay ul li {
+		    display: block;
+		    margin-bottom: 1em;
+		    position: relative;
+		    cursor: pointer;
+		    opacity: 0;
+		    opacity: 1\9\0;
+		    -webkit-transition: all .6s;
+		    -o-transition: all .6s;
+		    transition: all .6s;
+		}
+
+		.overlay ul li {
+		    &.btn-startint, a {
+		      display: block;
+		      position: relative;
+		      color: #fff;
+		      text-decoration: none;
+		      overflow: hidden;
+		      padding: 0;
+		      line-height: 2em;
+		      &.v-mobile { display: none; }
+		    }
+		} 
+
+		.overlay ul li span {
+		    display: block;
+		    position: relative;
+		    color: #fff;
+		    text-decoration: none;
+		    overflow: hidden;
+		}
+
+		.overlay.open {
+		    opacity: 0.9;
+		    visibility: visible;
+		    height: 100%;
+		}
+		.overlay.open li {
+		    -webkit-animation: fadeInRight 0.5s ease forwards;
+		    animation: fadeInRight 0.5s ease forwards;
+		    -webkit-animation-delay: 0.35s;
+		    animation-delay: 0.35s;
+		}
+
+		.overlay.open li:nth-child(2) {
+		    -webkit-animation-delay: 0.4s;
+		    animation-delay: 0.4s;
+		}
+
+		.overlay.open li:nth-child(3) {
+		    -webkit-animation-delay: 0.45s;
+		    animation-delay: 0.45s;
+		}
+
+		.overlay.open li:nth-child(4) {
+		    -webkit-animation-delay: 0.5s;
+		    animation-delay: 0.5s;
+		}
+
+	}
+	
+
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }

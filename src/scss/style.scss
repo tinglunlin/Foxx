@@ -1,0 +1,30 @@
+
+@import "base/sass-set";
+@import "base/transfrom";
+@import "base/reset";
+@import "base/typography";
+@import "base/layout";
+@import "base/header";
+@import "base/footer";
+@import "partials/lightbox";
+
+body {
+	font-size: 14px;
+	background-color: #e8e8e8;
+}
+a { text-decoration: none; cursor: pointer; }
+img { width: 100%; display: block; }
+:focus { outline: 0;}
+
+
+/* Home -------------------------------------------*/
+@import "page/home";
+
+/* About Agility -----------------------------*/
+
+
+
+/* Contact -----------------------------------------*/
+
+
+
