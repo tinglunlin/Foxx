@@ -1,0 +1,186 @@
+/*-- scholarship --*/
+
+#Scholarship {
+	width: 100%;
+	display: block;
+	background-color: rgb(232, 232, 232);
+	position: relative;
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+	#kv {
+		width: 100%;
+		height: 100vh;
+		background: url(../images/sc/kv.jpg) center no-repeat;
+		background-size: cover;
+		position: relative;
+		h1 {
+			width: 28%;
+			position: absolute;
+			top: 15%;
+			left: 0%;
+		}
+	}
+	h2 {
+		margin-top: 6%;
+		padding-bottom: 3%;
+	}
+	p {
+		font-size: 1.25em;
+	}
+	.grayBox {
+		width: 92%;
+		display: block;
+		position: relative;
+		background: rgba(223,227,229,0.92);
+		padding-top: 10%;
+	}
+	div.hr {
+		width: 45px;
+		height: 18px;
+	}
+	.allSlick {
+		width: 80%;
+		margin: 5% auto 10% auto;
+		.slick-dots {
+			bottom: -50px;
+		}
+		.slick-prev, .slick-next {
+			width: 38px;
+			height: 38px;			
+		}
+		.slick-prev {
+			background: url(../images/sc/prev.png) center no-repeat;
+			background-size: cover;
+			left: -10%;			
+		}
+		.slick-next {
+			background: url(../images/sc/next.png) center no-repeat;
+			background-size: cover;
+			right: -10%;			
+		}
+	}
+	.section1 {
+		width: 100%;
+		background: url(../images/sc/s1-bg.jpg) center no-repeat;
+		background-size: cover;
+		position: relative;
+		.container {
+			@include transform-R(translate(-6.2%,0));
+		}
+		.grayBox {
+			left: 8%;
+			border-top-left-radius: 150px;
+			&:before {
+				content: '';
+				width: 42%;
+				height: 90%;
+				background: url(../images/sc/first.png) center no-repeat;
+				background-size: contain;
+				position: absolute;
+				bottom: 0;
+				right: 0;			
+			}
+		}
+	}
+	.section2 {
+		width: 100%;
+		background: url(../images/sc/s2-bg.jpg) center no-repeat;
+		background-size: cover;
+		position: relative;
+		.container {
+			@include transform-R(translate(6.2%,0));
+		}
+		.grayBox {
+			padding-top: 6%;
+			border-bottom-Right-radius: 150px;
+			&:before {
+				content: '';
+				width: 46%;
+				height: 90%;
+				background: url(../images/sc/second.png) center no-repeat;
+				background-size: contain;
+				position: absolute;
+				bottom: 0;
+				left: 5%;			
+			}
+		}
+	}
+	.section3 {
+		width: 100%;
+		background: url(../images/sc/s3-bg.jpg) center no-repeat;
+		background-size: cover;
+		position: relative;
+		.grayBox {
+			width: 100%;
+			background: none;
+			&:before {
+				content: '';
+				width: 35%;
+				height: 90%;
+				background: url(../images/sc/third.png) center no-repeat;
+				background-size: contain;
+				position: absolute;
+				top: 5%;
+				right: 5%;
+				bottom: 5%;		
+			}
+		}
+		.downloadBox {
+			width: 100%;
+			a {
+				width: 100%;
+				display: block;
+				color: $drak-blue;
+				max-width: 400px;
+				margin: 10% auto;
+				background: rgba(223,227,229,0.96);
+				border-radius: 15px;
+				padding: 6.8%;
+				box-sizing: border-box;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+				@include transition-R(all 0.5s);
+				&:hover {
+					text-decoration: none;
+					background-color: white;
+					@include transform-R(scale(1.05));
+					z-index: 3;
+				}
+			}
+			p {
+				width: 100%;
+				text-align: center;
+				font-size: 1.71em;
+				font-weight: 500;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+				border-bottom: 3px solid $drak-blue;
+				color: $drak-blue;
+			}
+			h3 {
+				color: $drak-blue;
+			}
+			.download-img {
+				width: 60%;
+				margin: 0 auto 20%;
+			}
+			.shareLink {
+				padding: 5em 0;
+			}
+		}
+	}
+
+}
+
+// responsive
+@media screen and (max-width: 1249px) {
+#Scholarship {
+	.container {
+		width: 90%;
+	}
+}
+}
