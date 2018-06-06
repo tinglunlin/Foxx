@@ -16,3 +16,5 @@ $(document).ready(function(){
 		dots: true,
 	});
 });
+
+$('header').addClass('page2');

@@ -1,5 +1,11 @@
 /*-- scholarship --*/
 
+header.page2 ul li a {
+	color: #666666;
+}
+header.page2 ul li {
+    border-right: 2px solid #666666;
+}
 #Scholarship {
 	width: 100%;
 	display: block;
@@ -17,12 +23,13 @@
 		height: 100vh;
 		background: url(../images/sc/kv.jpg) center no-repeat;
 		background-size: cover;
+		background-position-x: 70%;
 		position: relative;
 		h1 {
 			width: 28%;
 			position: absolute;
 			top: 15%;
-			left: 0%;
+			left: 0;
 		}
 	}
 	h2 {
@@ -70,6 +77,7 @@
 		background-size: cover;
 		position: relative;
 		.container {
+			width: 88%;
 			@include transform-R(translate(-6.2%,0));
 		}
 		.grayBox {
@@ -93,6 +101,7 @@
 		background-size: cover;
 		position: relative;
 		.container {
+			width: 88%;
 			@include transform-R(translate(6.2%,0));
 		}
 		.grayBox {
@@ -177,10 +186,17 @@
 }
 
 // responsive
+@media screen and (max-width: 1449px) {
+#Scholarship {
+	.allSlick {
+		// width: 60%;
+	}	
+}
+}
 @media screen and (max-width: 1249px) {
 #Scholarship {
 	.container {
-		width: 90%;
+		// width: 90%;
 	}
 }
 }

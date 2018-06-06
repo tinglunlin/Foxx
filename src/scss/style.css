@@ -635,16 +635,16 @@ header .button_container.active .bottom {
   }
 }
 /* Footer ----------------------- */
-footer .shareLink {
+.shareLink {
   width: 100%;
   text-align: center;
   padding: 3em 0;
 }
-footer .shareLink ul > li {
+.shareLink ul > li {
   display: inline-block;
   padding: 0 15px;
 }
-footer .shareLink ul > li img {
+.shareLink ul > li img {
   width: 50px;
   opacity: 1;
   transition: opacity 0.3s;
@@ -653,9 +653,10 @@ footer .shareLink ul > li img {
   -ms-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
 }
-footer .shareLink ul > li a:hover img {
+.shareLink ul > li a:hover img {
   opacity: .7;
 }
+
 footer .footerBar {
   background-color: #b5b5b5;
   padding: 10px 0;
@@ -1763,6 +1764,14 @@ img {
 
 /* scholarship ------------------------------------*/
 /*-- scholarship --*/
+header.page2 ul li a {
+  color: #666666;
+}
+
+header.page2 ul li {
+  border-right: 2px solid #666666;
+}
+
 #Scholarship {
   width: 100%;
   display: block;
@@ -1781,13 +1790,14 @@ img {
   height: 100vh;
   background: url(../images/sc/kv.jpg) center no-repeat;
   background-size: cover;
+  background-position-x: 70%;
   position: relative;
 }
 #Scholarship #kv h1 {
   width: 28%;
   position: absolute;
   top: 15%;
-  left: 0%;
+  left: 0;
 }
 #Scholarship h2 {
   margin-top: 6%;
@@ -1835,6 +1845,7 @@ img {
   position: relative;
 }
 #Scholarship .section1 .container {
+  width: 88%;
   transform: translate(-6.2%, 0);
   -webkit-transform: translate(-6.2%, 0);
   -moz-transform: translate(-6.2%, 0);
@@ -1862,6 +1873,7 @@ img {
   position: relative;
 }
 #Scholarship .section2 .container {
+  width: 88%;
   transform: translate(6.2%, 0);
   -webkit-transform: translate(6.2%, 0);
   -moz-transform: translate(6.2%, 0);
@@ -1952,10 +1964,4 @@ img {
 }
 #Scholarship .section3 .downloadBox .shareLink {
   padding: 5em 0;
-}
-
-@media screen and (max-width: 1249px) {
-  #Scholarship .container {
-    width: 90%;
-  }
 }

@@ -1,25 +1,26 @@
 /* Footer ----------------------- */
-footer {
-	.shareLink {
-		width: 100%;
-		text-align: center;
-		padding: 3em 0;
-		ul > li {
-			display: inline-block;
-			padding: 0 15px;
+.shareLink {
+	width: 100%;
+	text-align: center;
+	padding: 3em 0;
+	ul > li {
+		display: inline-block;
+		padding: 0 15px;
+		img {
+			width: 50px;
+			opacity: 1;
+			@include transition-R(opacity .3s);
+		}
+		a:hover {
 			img {
-				width: 50px;
-				opacity: 1;
-				@include transition-R(opacity .3s);
-			}
-			a:hover {
-				img {
-					opacity: .7;
-				}
+				opacity: .7;
 			}
 		}
-		
 	}
+	
+}
+footer {
+	
 	.footerBar {
 		background-color: #b5b5b5;
 		padding: 10px 0;
