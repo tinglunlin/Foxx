@@ -102,9 +102,9 @@
     h1 {
     	width: 100%;
     	position: absolute;
-    	top: 50%;
+    	top: 15%;
     	left: 10%;
-    	@include transform-R(translateY(-90%));
+    	// @include transform-R(translateY(-90%));
     	@media (min-width: 1200px) {
     		top: 50%;
 	    	left: 10%;
@@ -256,6 +256,9 @@
 					z-index: 3;
 				}
 			}
+			@media (max-width: 350px) {
+				min-width: 280px;
+			}
 
 			
 			h3 {
@@ -328,6 +331,9 @@
 		margin-top: -30%;
 		background-color: transparent;
 		background-image: none;
+	}
+	@media (max-width: 350px) {
+		margin-top: -80px;
 	}
 	
 	.s1-content {

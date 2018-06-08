@@ -1,44 +1,36 @@
 /*-- scholarship --*/
 
-header.page2 ul li a {
-	color: #666666;
+header.grayColor {
+	ul li {
+		border-right: 2px solid #666666;
+		&:last-of-type {
+			border-right: none;
+		}
+		a {
+			color: #666666;
+		}
+	}
+	.open ul li {
+		border-right: none;
+	}
+	.button_container span {
+		background: #666666;
+	}
+	img.base {
+		display: block !important;
+	}
+	img.white {
+		display: none !important;
+	}
 }
-header.page2 ul li {
-    border-right: 2px solid #666666;
-}
-#Scholarship {
-	width: 100%;
-	display: block;
-	background-color: rgb(232, 232, 232);
-	position: relative;
+.applySc {
 	.container {
 		width: 100%;
 		max-width: 1200px;
 		height: 100%;
 		margin: 0 auto;
 		position: relative;
-	}
-	#kv {
-		width: 100%;
-		height: 100vh;
-		background: url(../images/sc/kv.jpg) center no-repeat;
-		background-size: cover;
-		background-position-x: 70%;
-		position: relative;
-		h1 {
-			width: 28%;
-			position: absolute;
-			top: 15%;
-			left: 0;
-		}
-	}
-	h2 {
-		margin-top: 6%;
-		padding-bottom: 3%;
-	}
-	p {
-		font-size: 1.25em;
-	}
+	}	
 	.grayBox {
 		width: 92%;
 		display: block;
@@ -49,6 +41,9 @@ header.page2 ul li {
 	div.hr {
 		width: 45px;
 		height: 18px;
+	}
+	section {
+		overflow: hidden;
 	}
 	.allSlick {
 		width: 80%;
@@ -70,6 +65,13 @@ header.page2 ul li {
 			background-size: cover;
 			right: -10%;			
 		}
+	}
+	h2 {
+		margin-top: 6%;
+		padding-bottom: 3%;
+	}
+	p {
+		font-size: 1.25em;
 	}
 	.section1 {
 		width: 100%;
@@ -109,13 +111,15 @@ header.page2 ul li {
 			border-bottom-Right-radius: 150px;
 			&:before {
 				content: '';
-				width: 46%;
-				height: 90%;
+				width: 44%;
+				height: 91%;
 				background: url(../images/sc/second.png) center no-repeat;
 				background-size: contain;
 				position: absolute;
 				bottom: 0;
-				left: 5%;			
+				left: 5%;
+				top: 9%;
+				min-width: 700px;			
 			}
 		}
 	}
@@ -169,9 +173,11 @@ header.page2 ul li {
 				margin-bottom: 10px;
 				border-bottom: 3px solid $drak-blue;
 				color: $drak-blue;
+				text-align: center;
 			}
 			h3 {
 				color: $drak-blue;
+				text-align: center;
 			}
 			.download-img {
 				width: 60%;
@@ -182,21 +188,221 @@ header.page2 ul li {
 			}
 		}
 	}
+}
+#Scholarship {
+	width: 100%;
+	display: block;
+	background-color: rgb(232, 232, 232);
+	position: relative;
+	
+	#kv {
+		width: 100%;
+		height: 100vh;
+		background: url(../images/sc/kv.jpg) center no-repeat;
+		background-size: cover;
+		background-position-x: 70%;
+		position: relative;
+		h1 {
+			width: 28%;
+			position: absolute;
+			top: 15%;
+			left: 0;
+		}
+	}
 
 }
 
 // responsive
 @media screen and (max-width: 1449px) {
 #Scholarship {
-	.allSlick {
-		// width: 60%;
-	}	
+	#kv h1 {
+		width: 20%;
+		left: 5%;
+	}
+}
+.applySc {
+	.section1 {
+		.container {
+			@include transform-R(translate(0,0));
+		}
+		.grayBox {
+			left: 8%;
+			border-top-left-radius: 100px;
+		}
+	}
+	.section2 {
+		.container {
+			@include transform-R(translate(0,0));
+		}
+		.grayBox:before {
+			width: 57%;
+			height: 94%;
+			left: 5%;
+			top: 6%;
+		}
+	}
+	.section3 {		
+		background-position-x: 0%;
+		.grayBox:before {
+			width: 64%;
+			right: -10%;
+		}
+	}
 }
 }
 @media screen and (max-width: 1249px) {
-#Scholarship {
+.applySc {
 	.container {
-		// width: 90%;
+		width: 90%;
+	}
+}
+}
+@media screen and (max-width: 1200px) {
+.applySc {
+	.container {
+		width: 90%;
+	}
+	.grayBox {
+		width: 100%;
+	}
+	.allSlick {
+		margin: 10% auto 20% auto;
+	}
+	.section1 {
+		.grayBox {				
+			left: 0;
+			border-radius: 0;
+			&:before {
+				width: 50%;
+			}
+		}			
+	}
+	.section2 {
+		.grayBox {				
+			right: 0;
+			border-radius: 0;
+			&:before {
+				width: 66%;
+				height: 95%;
+				left: -12%;
+			}
+		}
+	}
+}
+}
+@media screen and (max-width: 992px) {
+#Scholarship {
+	#kv h1 {
+		width: 40%;
+	}
+}
+.applySc {
+	.section2 {
+		.grayBox:before {
+			min-width: auto;
+		}
+	}
+	.section3 {
+		background: url(../images/sc/s3-bgm.jpg) no-repeat;
+		background-size: cover;
+		background-position: top center;
+		.grayBox {
+			margin-top: 18%;
+			&:before {
+				width: 100%;
+				right: -30%;
+			}
+		}
+		.downloadBox{
+			a {
+				max-width: 320px;
+			}
+		}
+	}
+}
+}
+@media screen and (max-width: 767px) {
+header.grayColor {
+	img.base {
+		display: none !important;
+	}
+	img.white {
+		display: block !important;
+	}
+	.button_container span {
+		background: #ffffff;
+	}
+	ul li a {
+		color: #ffffff;
+	}
+}
+}
+@media screen and (max-width: 576px) {
+.applySc {
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	div.hr {
+		margin-left: 10%;
+	}
+	h2 {
+		width: 96%;
+		padding-left: 10%;
+	}
+	p {
+		width: 96%;
+		padding-left: 10%;
+	}
+	.allSlick {
+		width: 100%;
+		.slick-prev, .slick-next {
+			width: 25px;
+			height: 25px;
+			top: auto;
+			bottom: -50px;
+		}
+		.slick-prev {
+			left: 2%;
+		}
+		.slick-next {
+			right: 2%;
+		}
+		.slick-dots {
+			bottom: -37px;
+		}
+	}
+	.section1, .section2 {
+		.grayBox:before {
+			width: 60%;
+		}
+		.container {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+	.section2 {
+		.grayBox:before {
+			width: 100%;
+			left: -30%;
+		}
+	}
+	.section3{
+		.downloadBox{
+			a {
+				max-width: 200px;
+				border-radius: 8px;
+			}
+			p {
+				padding-left: 0;
+				font-size: 1em;
+			}
+		}
+		.grayBox:before {
+			height: 100%;			
+		}
 	}
 }
 }

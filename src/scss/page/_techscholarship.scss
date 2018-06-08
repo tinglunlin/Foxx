@@ -1,0 +1,91 @@
+/*-- Tech scholarship --*/
+.pade3logo {
+	img.base {
+	display: none !important;
+	}
+	img.white {
+		display: block !important;
+	}
+}
+
+#TechScholarship {
+	width: 100%;
+	display: block;
+	background-color: rgb(232, 232, 232);
+	position: relative;
+	width: 100%;
+	background: url(../images/techsc/allbg.jpg) center no-repeat;
+	background-size: cover;
+	#kv {
+		width: 100%;
+		height: 125vh;
+		position: relative;
+		h1 {
+			width: 28%;
+			position: absolute;
+			top: 15%;
+			left: 0;
+		}
+	}
+	.section1 {
+		width: 100%;
+		background: none;
+	}
+	.section2 {
+		width: 100%;
+		background: none;
+	}
+	.section3 {
+		width: 100%;
+		background: none;
+	}
+}
+@media screen and (max-width: 1200px) {
+#TechScholarship {
+	#kv {
+		width: 100%;
+		height: 150vh;
+		background: url(../images/techsc/kv.jpg) center no-repeat;
+		background-size: cover;
+		h1 {
+			top: 20%;
+			left: 8%;
+		 }
+	}
+	.section3 {		
+		background: url(../images/techsc/s3-bg.jpg) center no-repeat;
+		background-size: cover;
+	}
+}
+}
+@media screen and (max-width: 992px) {
+#TechScholarship {
+	#kv {
+		width: 100%;
+		height: 100vh;
+		background: url(../images/techsc/kv.jpg) center no-repeat;
+		background-size: cover;
+		h1 {
+			width: 40%;
+			top: 15%;
+			left: 3%;
+			}
+	}
+}
+}
+@media screen and (max-width: 767px) {
+#TechScholarship {
+	#kv {
+		background: url(../images/techsc/kvm.jpg) center no-repeat;
+		background-size: cover;
+		h1 {
+			top: 15%;
+			left: 15%;
+			}
+	}
+	.section3 {		
+		background: url(../images/techsc/s3-bgm.jpg) center no-repeat;
+		background-size: cover;
+	}
+}
+}

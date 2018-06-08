@@ -426,18 +426,18 @@ header ul li a:hover {
   opacity: .8;
   text-decoration: none;
 }
-@media (min-width: 992px) {
-  header ul li {
-    font-size: 1.5em;
-    padding: 0 25px;
-  }
-}
 @media (min-width: 768px) {
   header ul li {
     font-size: 1.2em;
     padding: 0 10px;
     display: inline-block;
     border-right: 2px solid #ffffff;
+  }
+}
+@media (min-width: 992px) {
+  header ul li {
+    font-size: 1.5em;
+    padding: 0 25px;
   }
 }
 header .button_container {
@@ -634,6 +634,55 @@ header .button_container.active .bottom {
     left: 0;
   }
 }
+#scrolltop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 13;
+  right: 3%;
+  bottom: 15%;
+  display: none;
+}
+
+.scrolltop {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 2px solid #ffffff;
+  transition: all 0.5s 0.1s;
+  -webkit-transition: all 0.5s 0.1s;
+  -moz-transition: all 0.5s 0.1s;
+  -ms-transition: all 0.5s 0.1s;
+  -o-transition: all 0.5s 0.1s;
+  cursor: pointer;
+}
+.scrolltop:before {
+  content: '';
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.scrolltop:hover {
+  border: 2px solid #16d3d3;
+}
+.scrolltop:hover span {
+  color: #16d3d3;
+}
+.scrolltop span {
+  width: 90%;
+  font-size: 1em;
+  line-height: 1.2em;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.5s 0.1s;
+  -webkit-transition: all 0.5s 0.1s;
+  -moz-transition: all 0.5s 0.1s;
+  -ms-transition: all 0.5s 0.1s;
+  -o-transition: all 0.5s 0.1s;
+}
+
 /* Footer ----------------------- */
 .shareLink {
   width: 100%;
@@ -659,7 +708,7 @@ header .button_container.active .bottom {
 
 footer .footerBar {
   background-color: #b5b5b5;
-  padding: 10px 0;
+  padding: 15px 0;
   font-size: 0;
 }
 footer .footerBar a.foxconnEduFounLogo {
@@ -1036,13 +1085,8 @@ img {
 #home #kv h1 {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 10%;
-  transform: translateY(-90%);
-  -webkit-transform: translateY(-90%);
-  -moz-transform: translateY(-90%);
-  -ms-transform: translateY(-90%);
-  -o-transform: translateY(-90%);
 }
 @media (min-width: 1200px) {
   #home #kv h1 {
@@ -1226,6 +1270,11 @@ img {
     z-index: 3;
   }
 }
+@media (max-width: 350px) {
+  #home #s2-dream .s3-content .Card {
+    min-width: 280px;
+  }
+}
 #home #s2-dream .s3-content .Card h3 {
   font-size: 2em;
   line-height: 1.2em;
@@ -1308,6 +1357,11 @@ img {
     margin-top: -30%;
     background-color: transparent;
     background-image: none;
+  }
+}
+@media (max-width: 350px) {
+  #home #s3-teacher {
+    margin-top: -80px;
   }
 }
 #home #s3-teacher .s1-content {
@@ -1762,89 +1816,86 @@ img {
   }
 }
 
-/* scholarship ------------------------------------*/
+/* Scholarship ------------------------------------*/
 /*-- scholarship --*/
-header.page2 ul li a {
-  color: #666666;
-}
-
-header.page2 ul li {
+header.grayColor ul li {
   border-right: 2px solid #666666;
 }
-
-#Scholarship {
-  width: 100%;
-  display: block;
-  background-color: #e8e8e8;
-  position: relative;
+header.grayColor ul li:last-of-type {
+  border-right: none;
 }
-#Scholarship .container {
+header.grayColor ul li a {
+  color: #666666;
+}
+header.grayColor .open ul li {
+  border-right: none;
+}
+header.grayColor .button_container span {
+  background: #666666;
+}
+header.grayColor img.base {
+  display: block !important;
+}
+header.grayColor img.white {
+  display: none !important;
+}
+
+.applySc .container {
   width: 100%;
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
   position: relative;
 }
-#Scholarship #kv {
-  width: 100%;
-  height: 100vh;
-  background: url(../images/sc/kv.jpg) center no-repeat;
-  background-size: cover;
-  background-position-x: 70%;
-  position: relative;
-}
-#Scholarship #kv h1 {
-  width: 28%;
-  position: absolute;
-  top: 15%;
-  left: 0;
-}
-#Scholarship h2 {
-  margin-top: 6%;
-  padding-bottom: 3%;
-}
-#Scholarship p {
-  font-size: 1.25em;
-}
-#Scholarship .grayBox {
+.applySc .grayBox {
   width: 92%;
   display: block;
   position: relative;
   background: rgba(223, 227, 229, 0.92);
   padding-top: 10%;
 }
-#Scholarship div.hr {
+.applySc div.hr {
   width: 45px;
   height: 18px;
 }
-#Scholarship .allSlick {
+.applySc section {
+  overflow: hidden;
+}
+.applySc .allSlick {
   width: 80%;
   margin: 5% auto 10% auto;
 }
-#Scholarship .allSlick .slick-dots {
+.applySc .allSlick .slick-dots {
   bottom: -50px;
 }
-#Scholarship .allSlick .slick-prev, #Scholarship .allSlick .slick-next {
+.applySc .allSlick .slick-prev, .applySc .allSlick .slick-next {
   width: 38px;
   height: 38px;
 }
-#Scholarship .allSlick .slick-prev {
+.applySc .allSlick .slick-prev {
   background: url(../images/sc/prev.png) center no-repeat;
   background-size: cover;
   left: -10%;
 }
-#Scholarship .allSlick .slick-next {
+.applySc .allSlick .slick-next {
   background: url(../images/sc/next.png) center no-repeat;
   background-size: cover;
   right: -10%;
 }
-#Scholarship .section1 {
+.applySc h2 {
+  margin-top: 6%;
+  padding-bottom: 3%;
+}
+.applySc p {
+  font-size: 1.25em;
+}
+.applySc .section1 {
   width: 100%;
   background: url(../images/sc/s1-bg.jpg) center no-repeat;
   background-size: cover;
   position: relative;
 }
-#Scholarship .section1 .container {
+.applySc .section1 .container {
   width: 88%;
   transform: translate(-6.2%, 0);
   -webkit-transform: translate(-6.2%, 0);
@@ -1852,11 +1903,11 @@ header.page2 ul li {
   -ms-transform: translate(-6.2%, 0);
   -o-transform: translate(-6.2%, 0);
 }
-#Scholarship .section1 .grayBox {
+.applySc .section1 .grayBox {
   left: 8%;
   border-top-left-radius: 150px;
 }
-#Scholarship .section1 .grayBox:before {
+.applySc .section1 .grayBox:before {
   content: '';
   width: 42%;
   height: 90%;
@@ -1866,13 +1917,13 @@ header.page2 ul li {
   bottom: 0;
   right: 0;
 }
-#Scholarship .section2 {
+.applySc .section2 {
   width: 100%;
   background: url(../images/sc/s2-bg.jpg) center no-repeat;
   background-size: cover;
   position: relative;
 }
-#Scholarship .section2 .container {
+.applySc .section2 .container {
   width: 88%;
   transform: translate(6.2%, 0);
   -webkit-transform: translate(6.2%, 0);
@@ -1880,31 +1931,33 @@ header.page2 ul li {
   -ms-transform: translate(6.2%, 0);
   -o-transform: translate(6.2%, 0);
 }
-#Scholarship .section2 .grayBox {
+.applySc .section2 .grayBox {
   padding-top: 6%;
   border-bottom-Right-radius: 150px;
 }
-#Scholarship .section2 .grayBox:before {
+.applySc .section2 .grayBox:before {
   content: '';
-  width: 46%;
-  height: 90%;
+  width: 44%;
+  height: 91%;
   background: url(../images/sc/second.png) center no-repeat;
   background-size: contain;
   position: absolute;
   bottom: 0;
   left: 5%;
+  top: 9%;
+  min-width: 700px;
 }
-#Scholarship .section3 {
+.applySc .section3 {
   width: 100%;
   background: url(../images/sc/s3-bg.jpg) center no-repeat;
   background-size: cover;
   position: relative;
 }
-#Scholarship .section3 .grayBox {
+.applySc .section3 .grayBox {
   width: 100%;
   background: none;
 }
-#Scholarship .section3 .grayBox:before {
+.applySc .section3 .grayBox:before {
   content: '';
   width: 35%;
   height: 90%;
@@ -1915,10 +1968,10 @@ header.page2 ul li {
   right: 5%;
   bottom: 5%;
 }
-#Scholarship .section3 .downloadBox {
+.applySc .section3 .downloadBox {
   width: 100%;
 }
-#Scholarship .section3 .downloadBox a {
+.applySc .section3 .downloadBox a {
   width: 100%;
   display: block;
   color: #051468;
@@ -1935,7 +1988,7 @@ header.page2 ul li {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-#Scholarship .section3 .downloadBox a:hover {
+.applySc .section3 .downloadBox a:hover {
   text-decoration: none;
   background-color: white;
   transform: scale(1.05);
@@ -1945,7 +1998,7 @@ header.page2 ul li {
   -o-transform: scale(1.05);
   z-index: 3;
 }
-#Scholarship .section3 .downloadBox p {
+.applySc .section3 .downloadBox p {
   width: 100%;
   text-align: center;
   font-size: 1.71em;
@@ -1954,14 +2007,290 @@ header.page2 ul li {
   margin-bottom: 10px;
   border-bottom: 3px solid #051468;
   color: #051468;
+  text-align: center;
 }
-#Scholarship .section3 .downloadBox h3 {
+.applySc .section3 .downloadBox h3 {
   color: #051468;
+  text-align: center;
 }
-#Scholarship .section3 .downloadBox .download-img {
+.applySc .section3 .downloadBox .download-img {
   width: 60%;
   margin: 0 auto 20%;
 }
-#Scholarship .section3 .downloadBox .shareLink {
+.applySc .section3 .downloadBox .shareLink {
   padding: 5em 0;
+}
+
+#Scholarship {
+  width: 100%;
+  display: block;
+  background-color: #e8e8e8;
+  position: relative;
+}
+#Scholarship #kv {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/sc/kv.jpg) center no-repeat;
+  background-size: cover;
+  background-position-x: 70%;
+  position: relative;
+}
+#Scholarship #kv h1 {
+  width: 28%;
+  position: absolute;
+  top: 15%;
+  left: 0;
+}
+
+@media screen and (max-width: 1449px) {
+  #Scholarship #kv h1 {
+    width: 20%;
+    left: 5%;
+  }
+
+  .applySc .section1 .container {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+  }
+  .applySc .section1 .grayBox {
+    left: 8%;
+    border-top-left-radius: 100px;
+  }
+  .applySc .section2 .container {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+  }
+  .applySc .section2 .grayBox:before {
+    width: 57%;
+    height: 94%;
+    left: 5%;
+    top: 6%;
+  }
+  .applySc .section3 {
+    background-position-x: 0%;
+  }
+  .applySc .section3 .grayBox:before {
+    width: 64%;
+    right: -10%;
+  }
+}
+@media screen and (max-width: 1249px) {
+  .applySc .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .applySc .container {
+    width: 90%;
+  }
+  .applySc .grayBox {
+    width: 100%;
+  }
+  .applySc .allSlick {
+    margin: 10% auto 20% auto;
+  }
+  .applySc .section1 .grayBox {
+    left: 0;
+    border-radius: 0;
+  }
+  .applySc .section1 .grayBox:before {
+    width: 50%;
+  }
+  .applySc .section2 .grayBox {
+    right: 0;
+    border-radius: 0;
+  }
+  .applySc .section2 .grayBox:before {
+    width: 66%;
+    height: 95%;
+    left: -12%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #Scholarship #kv h1 {
+    width: 40%;
+  }
+
+  .applySc .section2 .grayBox:before {
+    min-width: auto;
+  }
+  .applySc .section3 {
+    background: url(../images/sc/s3-bgm.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+  .applySc .section3 .grayBox {
+    margin-top: 18%;
+  }
+  .applySc .section3 .grayBox:before {
+    width: 100%;
+    right: -30%;
+  }
+  .applySc .section3 .downloadBox a {
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header.grayColor img.base {
+    display: none !important;
+  }
+  header.grayColor img.white {
+    display: block !important;
+  }
+  header.grayColor .button_container span {
+    background: #ffffff;
+  }
+  header.grayColor ul li a {
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 576px) {
+  .applySc .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .applySc div.hr {
+    margin-left: 10%;
+  }
+  .applySc h2 {
+    width: 96%;
+    padding-left: 10%;
+  }
+  .applySc p {
+    width: 96%;
+    padding-left: 10%;
+  }
+  .applySc .allSlick {
+    width: 100%;
+  }
+  .applySc .allSlick .slick-prev, .applySc .allSlick .slick-next {
+    width: 25px;
+    height: 25px;
+    top: auto;
+    bottom: -50px;
+  }
+  .applySc .allSlick .slick-prev {
+    left: 2%;
+  }
+  .applySc .allSlick .slick-next {
+    right: 2%;
+  }
+  .applySc .allSlick .slick-dots {
+    bottom: -37px;
+  }
+  .applySc .section1 .grayBox:before, .applySc .section2 .grayBox:before {
+    width: 60%;
+  }
+  .applySc .section1 .container, .applySc .section2 .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .applySc .section2 .grayBox:before {
+    width: 100%;
+    left: -30%;
+  }
+  .applySc .section3 .downloadBox a {
+    max-width: 200px;
+    border-radius: 8px;
+  }
+  .applySc .section3 .downloadBox p {
+    padding-left: 0;
+    font-size: 1em;
+  }
+  .applySc .section3 .grayBox:before {
+    height: 100%;
+  }
+}
+/* Techscholarship ------------------------------------*/
+/*-- Tech scholarship --*/
+.pade3logo img.base {
+  display: none !important;
+}
+.pade3logo img.white {
+  display: block !important;
+}
+
+#TechScholarship {
+  width: 100%;
+  display: block;
+  background-color: #e8e8e8;
+  position: relative;
+  width: 100%;
+  background: url(../images/techsc/allbg.jpg) center no-repeat;
+  background-size: cover;
+}
+#TechScholarship #kv {
+  width: 100%;
+  height: 125vh;
+  position: relative;
+}
+#TechScholarship #kv h1 {
+  width: 28%;
+  position: absolute;
+  top: 15%;
+  left: 0;
+}
+#TechScholarship .section1 {
+  width: 100%;
+  background: none;
+}
+#TechScholarship .section2 {
+  width: 100%;
+  background: none;
+}
+#TechScholarship .section3 {
+  width: 100%;
+  background: none;
+}
+
+@media screen and (max-width: 1200px) {
+  #TechScholarship #kv {
+    width: 100%;
+    height: 150vh;
+    background: url(../images/techsc/kv.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #TechScholarship #kv h1 {
+    top: 20%;
+    left: 8%;
+  }
+  #TechScholarship .section3 {
+    background: url(../images/techsc/s3-bg.jpg) center no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 992px) {
+  #TechScholarship #kv {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/techsc/kv.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #TechScholarship #kv h1 {
+    width: 40%;
+    top: 15%;
+    left: 3%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #TechScholarship #kv {
+    background: url(../images/techsc/kvm.jpg) center no-repeat;
+    background-size: cover;
+  }
+  #TechScholarship #kv h1 {
+    top: 15%;
+    left: 15%;
+  }
+  #TechScholarship .section3 {
+    background: url(../images/techsc/s3-bgm.jpg) center no-repeat;
+    background-size: cover;
+  }
 }

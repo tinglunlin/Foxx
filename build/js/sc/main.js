@@ -17,4 +17,20 @@ $(document).ready(function(){
 	});
 });
 
-$('header').addClass('page2');
+$(function(){
+	var wh = $(window).height();
+	var offset= wh/5;
+	
+	$('header').addClass('grayColor');
+
+	$(window).scroll(function () {
+		var scrollVal = $(this).scrollTop();
+
+		if(scrollVal>offset){
+			$('header').removeClass('grayColor');
+		} else{
+			$('header').addClass('grayColor');
+		}
+
+	});
+});	

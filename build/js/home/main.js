@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	var screenH = $(window).height();
-	$('#kv').css('height',screenH);
+	// $('#kv').css('height',screenH);
 
-  	var headerBarH = $('header .container-fluid.nav-right').height();
+	var headerBarH = $('header .container-fluid.nav-right').height();
   	var s2Offset = $("#s2-dream").offset().top - headerBarH;
   	var s3Offset = $("#s3-teacher").offset().top - headerBarH;
 
