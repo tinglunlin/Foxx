@@ -203,10 +203,10 @@ header.grayColor {
 		background-position-x: 70%;
 		position: relative;
 		h1 {
-			width: 28%;
+			width: 24%;
 			position: absolute;
-			top: 15%;
-			left: 0;
+			top: 18%;
+			left: 5%;
 		}
 	}
 
@@ -217,7 +217,8 @@ header.grayColor {
 #Scholarship {
 	#kv h1 {
 		width: 20%;
-		left: 5%;
+		top: 20%;
+		left: 15%;
 	}
 }
 .applySc {
@@ -294,6 +295,7 @@ header.grayColor {
 #Scholarship {
 	#kv h1 {
 		width: 40%;
+		left: 3%;
 	}
 }
 .applySc {
@@ -336,8 +338,20 @@ header.grayColor {
 		color: #ffffff;
 	}
 }
+#Scholarship {
+	#kv h1 {
+		left: 15%;
+	}
+}
 }
 @media screen and (max-width: 576px) {
+#Scholarship {	
+	#kv {
+		background: url(../images/sc/kv-m.jpg) top center no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
 .applySc {
 	.container {
 		width: 100%;
@@ -362,6 +376,7 @@ header.grayColor {
 			height: 25px;
 			top: auto;
 			bottom: -50px;
+			z-index: 2;
 		}
 		.slick-prev {
 			left: 2%;

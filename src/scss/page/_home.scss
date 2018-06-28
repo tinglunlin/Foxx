@@ -93,11 +93,35 @@
     	background-size: cover;
     	background-position: right bottom;
     	width: 100%;
-    	height: 100%;
+		height: 100%;		
     	@media (min-width: 1200px) {
 			background-image: url(../images/home/kv1.jpg);
 			background-position: center;
-		}	
+		}
+		.playbutton {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 60px;
+			height: 60px;
+			background-image: url(../images/vd-play.svg);
+			cursor: pointer;
+			@include transition-R(all 0.5s ease);
+			@include transform-R(translate(-50%,0));
+			@media (min-width: 576px) {
+				@include transform-R(translate(-50%,-50%));
+			}
+			@media (min-width: 992px) {
+				width: 90px;
+				height: 90px;
+			}
+			&:hover {
+				@media (min-width: 992px) {
+					@include transform-R(translate(-50%,-50%) scale(1.15));
+				}	
+			}
+		}
     }
     h1 {
     	width: 100%;
@@ -113,10 +137,12 @@
     	
     	img {
     		width: 40%;
-    		@media (min-width: 1200px) {
+			@media (min-width: 960px) {
+    			width: 28%;
+    		}
+			@media (min-width: 1200px) {
     			width: 20%;
     		}
-
     	}
     }
     .scroll {
@@ -221,13 +247,21 @@
 			padding-left: 0;
 			margin: 45% auto 0;
 		}
-		.col {
-			@media (max-width: 768px) {
-				padding: 5px;
+		.row-r {
+			width:100%;
+			.col-rbox {
+				width: 100%;
+				display: inline-block;
+				vertical-align: top;
+				margin-bottom: 1em;
+				@media (min-width: 576px) {
+					width: 49%;
+					padding-right: 1em;
+				}
 			}
 		}
 		.Card {
-			min-width: 310px;
+			min-width: 250px;
 			position: relative;
 			display: block;
 			font-size: 16px;
@@ -249,7 +283,7 @@
 			@media (min-width: 992px) {
 				min-width: auto;
 				font-size: 16px;
-				padding: 4em 1.5em;
+				padding: 3.5em 1.5em;
 				&:hover {
 					background-color: rgba(299,299,299,1);
 					@include transform-R(scale(1.05));
@@ -257,7 +291,7 @@
 				}
 			}
 			@media (max-width: 350px) {
-				min-width: 280px;
+				// min-width: 280px;
 			}
 
 			
@@ -339,6 +373,12 @@
 	.s1-content {
 		width: 90%;
 		margin: 0 auto;
+		@media (min-width: 1200px) and (max-width: 1399px) {
+			width: 75%;
+		}
+		@media (min-width: 1440px) and (max-width: 1660px) {
+			width: 80%;
+		}
 		h2 {
 			margin-top: 1em;
 			padding-bottom: 1em;
@@ -438,11 +478,14 @@
 			}
 			.slick-list {
 				padding: 5em 0 !important;
+				width: 75%;
+				margin: 0 auto;
 				@media (min-width: 576px) {
 					padding: 20% 0 !important;
+					width: 100%;
 				}
 				@media (min-width: 992px) {
-					padding: 5em 0 !important;
+					padding: 5em 0 !important;					
 				}
 				
 			}
@@ -557,23 +600,27 @@
 				width: 100%;
 				margin: 0 auto;
 				color: #051468;
-
+				text-align: center;
 				.title {
-					display: block;
-					text-align: center;
+					// display: block;
+					// text-align: center;
+					display: inline-block;
 					font-size: 1.5em;
 					font-weight: 500;
+					border-bottom: 2px solid #051468;					
+					padding-bottom: 0.28em;
+					margin-bottom: 0.38em;
 					@media (min-width: 768px) {
 						font-size: 2em;
 					}
-					&:after {
-						content: '';
-						display: block;
-						width: calc( 100% - 70% );
-						height: 2px;
-						margin: .5em auto;
-						background-color: #051468;
-					}
+					// &:after {
+					// 	content: '';
+					// 	display: block;
+					// 	width: calc( 100% - 70% );
+					// 	height: 2px;
+					// 	margin: .5em auto;
+					// 	background-color: #051468;
+					// }
 				}
 				.name {
 					display: block;
@@ -637,11 +684,17 @@
 			@media (min-width: 992px) {
 				height: 600px;
 				width: 70%;
-				padding: 3.2em 6%;
+				padding: 3.2em 13%;
 			}
 			@media (min-width: 1500px) {
 				height: 500px;
+				width: 60%;
+				padding: 4.2em 10%;
+			}
+			@media (min-width: 1660px) {
+				height: 500px;
 				width: 50%;
+				padding: 4.2em 6%;
 			}
 			.hr {
 				width: 45px;

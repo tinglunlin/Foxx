@@ -1,6 +1,14 @@
+$(document).ready(function(){
+    if($(window).scrollTop() > 30){
+        $('header').addClass('sm');
+    }
+});
+
 $(function(){
     var wh = $(window).height();
     var offset= wh/5;
+
+    
 
     $(window).scroll(function () {
         var scrollVal = $(this).scrollTop();

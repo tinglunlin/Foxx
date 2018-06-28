@@ -93,8 +93,13 @@ $('.teacherSlick .slideCard').click(function(){
 		var vd_data = $(this).attr('data-rel');
 		player.loadVideoById(vd_data, 0, "default");
 		show_VD();
-	}
-	
+	}	
+});
+
+$('#kv .img .playbutton').click(function(){
+		var vd_data = $(this).attr('data-rel');
+		player.loadVideoById(vd_data, 0, "default");
+		show_VD();
 });
 
 function show_VD() {

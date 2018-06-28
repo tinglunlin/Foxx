@@ -73,7 +73,7 @@ p {
     letter-spacing: 4.9px;
   }
   h2 {
-    font-size: 5em;
+    font-size: 3.8em;
     letter-spacing: 4.9px;
   }
   h3 {
@@ -91,7 +91,13 @@ p {
   p {
     font-size: 1.5em;
   }
+}
 
+@media (min-width: 1499px) {
+  h2 {
+    font-size: 5em;
+    letter-spacing: 4.9px;
+  }
 }
 
 div.hr {
@@ -132,6 +138,7 @@ $light-blue: #16d3d3;
   .container {
     max-width: 540px;
   }
+  
 }
 
 @media (min-width: 768px) {
@@ -140,6 +147,7 @@ $light-blue: #16d3d3;
   }
   .visible-tablet { display: inherit !important; }
   .visible-phone { display: none !important; }
+  .hidden-phone { display: inherit !important; }
 }
 
 @media (min-width: 992px) {
@@ -183,3 +191,4 @@ $light-blue: #16d3d3;
   }
 }
 
+@import "lock";
