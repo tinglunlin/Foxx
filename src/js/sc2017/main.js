@@ -1,0 +1,1 @@
+$('header').addClass('pade3logo');

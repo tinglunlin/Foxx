@@ -2481,3 +2481,231 @@ header.grayColor img.white {
     background-size: cover;
   }
 }
+/* scholarship 2017------------------------------------*/
+/*-- scholarship 2017 --*/
+#Scholarship2017 {
+  width: 100%;
+  display: block;
+  position: relative;
+  background: url(../images/sc2017/bg.jpg) center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+#Scholarship2017 section {
+  width: 100%;
+  position: relative;
+  background: none;
+}
+#Scholarship2017 .grayBox:before {
+  content: none;
+}
+#Scholarship2017 #kv {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#Scholarship2017 #kv h1 {
+  width: 30%;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+}
+#Scholarship2017 h2 {
+  margin-top: 3%;
+  padding-bottom: 3%;
+}
+#Scholarship2017 .section1 {
+  background: none;
+  position: relative;
+  overflow: visible;
+}
+#Scholarship2017 .section1:before {
+  content: '';
+  width: 39%;
+  padding-bottom: 30%;
+  background: url(../images/sc2017/section1-rightbg.png) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: -27%;
+  z-index: 1;
+}
+#Scholarship2017 .section1 .grayBox {
+  left: 0;
+  border-radius: 0;
+  padding: 3% 0;
+}
+#Scholarship2017 .section1 .grayBox > .container {
+  transform: translate(6.2%, 0);
+  -webkit-transform: translate(6.2%, 0);
+  -moz-transform: translate(6.2%, 0);
+  -ms-transform: translate(6.2%, 0);
+  -o-transform: translate(6.2%, 0);
+}
+#Scholarship2017 .section2 .grayBox {
+  left: 8%;
+  border-radius: 0;
+  border-bottom-left-radius: 150px;
+  padding: 3% 0;
+}
+#Scholarship2017 .section2 .grayBox > .container {
+  transform: translate(-6.2%, 0);
+  -webkit-transform: translate(-6.2%, 0);
+  -moz-transform: translate(-6.2%, 0);
+  -ms-transform: translate(-6.2%, 0);
+  -o-transform: translate(-6.2%, 0);
+}
+#Scholarship2017 .article {
+  width: 100%;
+  display: block;
+  margin: 5% auto;
+  clear: both;
+}
+#Scholarship2017 .article .report {
+  float: left;
+  vertical-align: top;
+  width: 42%;
+  padding-right: 3%;
+}
+#Scholarship2017 .article .report-img {
+  float: right;
+  vertical-align: top;
+  width: 58%;
+}
+#Scholarship2017 .article .timeTag {
+  display: inline-block;
+  padding: 5px;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #eaeaea;
+  background: #051468;
+  margin-bottom: 2%;
+}
+#Scholarship2017 .article h3.report-title {
+  width: 100%;
+  display: block;
+  font-size: 2.7em;
+  font-weight: 400;
+  color: #051468;
+  line-height: 1.4em;
+  padding-bottom: 2%;
+  border-bottom: 2px solid #051468;
+}
+#Scholarship2017 .article p {
+  width: 100%;
+  display: block;
+  padding: 4% 0;
+  font-size: 1.44em;
+  font-weight: 500;
+  line-height: 2em;
+  letter-spacing: 0.18em;
+  text-indent: 2.5em;
+  color: #162a38;
+}
+#Scholarship2017 .report-btn, #Scholarship2017 .more-btn {
+  width: 100%;
+  text-align: center;
+}
+#Scholarship2017 .report-btn a, #Scholarship2017 .more-btn a {
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 4% 10%;
+  color: #666666;
+  font-weight: 400;
+  font-size: 1.44em;
+  letter-spacing: 0.18em;
+}
+#Scholarship2017 .divider {
+  width: 100%;
+  height: 1px;
+  display: block;
+  clear: both;
+  border-bottom: 3px dotted #b7b7b7;
+  margin: 3% auto;
+}
+#Scholarship2017 h3.other-report {
+  width: 100%;
+  display: block;
+  font-size: 2.7em;
+  font-weight: bold;
+  color: #051468;
+  line-height: 1.4em;
+}
+#Scholarship2017 .ot-re-list {
+  width: 100%;
+  display: block;
+  margin: 3% 0;
+  font-size: 0px;
+}
+#Scholarship2017 .ot-re-list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#Scholarship2017 .ot-re-list li.ot-re-item {
+  width: 32%;
+  display: inline-block;
+  margin: 1% 2% 4% 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+#Scholarship2017 .ot-re-list li.ot-re-item:nth-child(3), #Scholarship2017 .ot-re-list li.ot-re-item:nth-child(6), #Scholarship2017 .ot-re-list li.ot-re-item:nth-child(9), #Scholarship2017 .ot-re-list li.ot-re-item:nth-child(12), #Scholarship2017 .ot-re-list li.ot-re-item:nth-child(15), #Scholarship2017 .ot-re-list li.ot-re-item:nth-child(18) {
+  margin-right: 0;
+}
+#Scholarship2017 .ot-re-list li.ot-re-item a {
+  display: block;
+  color: inherit;
+}
+#Scholarship2017 .ot-re-list li.ot-re-item a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+#Scholarship2017 .ot-re-list li.ot-re-item .ot-re-txt {
+  width: 100%;
+  padding: 5% 10%;
+  background: #ffffff;
+}
+#Scholarship2017 .ot-re-list li.ot-re-item .ot-re-txt p {
+  display: block;
+  font-size: 1.32em;
+  font-weight: 500;
+  line-height: 1.6em;
+  color: #162a38;
+  margin-bottom: 5%;
+}
+#Scholarship2017 .ot-re-list li.ot-re-item .ot-re-txt .arrow {
+  width: 100%;
+  text-align: center;
+}
+#Scholarship2017 .ot-re-list li.ot-re-item .ot-re-txt .arrow-g {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #666666;
+  border-left: 2px solid #666666;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+}
+#Scholarship2017 .more-btn {
+  margin-bottom: 5%;
+}
+#Scholarship2017 .more-btn a {
+  padding: 2% 5%;
+}
+#Scholarship2017 .section3 {
+  background: url(../images/sc2017/section3-bg.jpg) top center no-repeat;
+  background-size: cover;
+}
+#Scholarship2017 .section3 > .grayBox {
+  padding-bottom: 12%;
+}
